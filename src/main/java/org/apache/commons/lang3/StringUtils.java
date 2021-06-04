@@ -3672,6 +3672,9 @@ public class StringUtils {
      * @since 3.2
      */
     public static boolean isNoneBlank(final CharSequence... css) {
+        if( ArrayUtils.isEmpty(css)){
+            return true;
+        }
       return !isAnyBlank(css);
     }
 
